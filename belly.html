@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏍 Belly</h1>
+
+        <p class="bio">
+            Vario K59J 2019
+        </p>
+
+        <div class="gallery">
+            <img src="assets/foto1.jpg" alt="Belly 1">
+            <img src="assets/foto2.jpg" alt="Belly 2">
+            <img src="assets/foto3.jpg" alt="Belly 3">
+            <img src="assets/foto4.jpg" alt="Belly 4">
+            <img src="assets/foto5.jpg" alt="Belly 5">
+            <img src="assets/foto6.jpg" alt="Belly 6">
+        </div>
+
+        <a href="index.html" class="btn">
+            ⬅️ Kembali
+        </a>
+    </div>
+
+<script>
+document.querySelectorAll('.gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox';
+        overlay.innerHTML = `<img src="${img.src}">`;
+        overlay.onclick = () => overlay.remove();
+        document.body.appendChild(overlay);
+    });
+});
+</script>
+
+</body>
+</html>
