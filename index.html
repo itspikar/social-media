@@ -7,8 +7,8 @@
     <title>Muhamad Dzulfhikar</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
     <div class="container">
         <img src="PP.jpg" alt="Profile" class="profile">
 
@@ -28,7 +28,32 @@
             <i class="fa-brands fa-tiktok"></i>
             TikTok
         </a>
+    
+        <a href="belly.html" class="btn">
+            🏍  Belly
+        </a>
     </div>
+    
+    <div id="popup" class="popup">
+    <img id="popup-img">
+    </div>
+
+<script>
+const images = document.querySelectorAll('.gallery img');
+const popup = document.getElementById('popup');
+const popupImg = document.getElementById('popup-img');
+
+images.forEach(img=>{
+    img.addEventListener('click',()=>{
+        popup.style.display='flex';
+        popupImg.src=img.src;
+    });
+});
+
+popup.addEventListener('click',()=>{
+    popup.style.display='none';
+});
+</script>
 
 </body>
 </html>
